@@ -182,7 +182,7 @@ feature_descriptions = {
     'Skills_Development_Programs': "Rate your skills development program effectiveness (0-100)",
     'Unemployment_Rate': "What is your company's unemployment rate? (0-100, lower is better)",
     'Youth_Unemployment_Rate': "What is your youth unemployment rate? (0-100, lower is better)",
-    'Gender_Pay_Gap': "What is your gender pay gap? (0-100, lower is better)",
+    'Gender_Pay_Gap': "Rate your progress in reducing gender pay gap (0-100)",
     'Worker_Safety_Incidents': "Rate of safety incidents (0-100, lower is better)",
     'Employee_Turnover_Rate': "What is your employee turnover rate? (0-100, lower is better)",
     'R&D_Expenditure': "Rate your R&D expenditure relative to industry average (0-100)",
@@ -314,6 +314,6 @@ if len(st.session_state.report_history) > 0:
 
     if st.button("🗑️ Clear History"):
         st.session_state.report_history = []
-        st.experimental_rerun()
+        st.rerun()
 else:
     st.info("No reports in history yet. Generate a prediction to create a report.")
